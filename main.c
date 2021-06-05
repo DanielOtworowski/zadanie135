@@ -38,10 +38,41 @@ int main() {
 }
 
 void prostokat() {
-    /* TODO - osoba3 */
+    
+  float a, b, wynik;
+    printf("podaj A: \n");
+    if(scanf("%f", &a)==0)
+        {
+        printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(a<=0)
+        {
 
-    /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("\npole prostokata - TODO\n\n");
+            printf("podaj A wieksze od 0\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    printf("podaj B: \n");
+    if(scanf("%f", &b)==0)
+        {
+            printf("podaj cyfre");
+            exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(b<=0)
+        {
+
+            printf("podaj B wieksze od 0\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    wynik= a * b;
+
+    printf("%s\n" "%.2f" "%s", "\npole prostokata - ", wynik, "\n\n");
 }
 
 void trojkat() {
