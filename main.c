@@ -18,8 +18,8 @@ int main() {
     while(TRUE) {
         printf("Opcje programu:\n");
         printf("===============\n");
-        printf("%d %s\n", OPCJA_PROSTOKAT,  " - pole prostok¹ta");
-        printf("%d %s\n", OPCJA_TROJKAT,    " - pole trójk¹ta");
+        printf("%d %s\n", OPCJA_PROSTOKAT,  " - pole prostokata");
+        printf("%d %s\n", OPCJA_TROJKAT,    " - pole trójkata");
         printf("%d %s\n", OPCJA_WYJSCIE,    " - koniec");
         printf("\nPodaj kod polecenia: ");
         scanf("%d", &wybrana_opcja);
@@ -38,10 +38,40 @@ int main() {
 }
 
 void prostokat() {
-    /* TODO - osoba2 */
+    float a, b, wynik;
+    printf("podaj A: \n");
+    if(scanf("%f", &a)==0)
+        {
+        printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(a<=0)
+        {
 
-    /* TODO - właściwe obliczanie pola zrealizować poprzez dedykowaną funkcję */
-    printf("\npole prostok¹ta - TODO\n\n");
+            printf("podaj A wieksze od 0\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    printf("podaj B: \n");
+    if(scanf("%f", &b)==0)
+        {
+            printf("podaj cyfre");
+            exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(b<=0)
+        {
+
+            printf("podaj B wieksze od 0\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+    wynik= a * b;
+
+    printf("%s\n" "%.2f" "%s", "\npole prostokata - ", wynik, "\n\n");
 }
 
 void trojkat() {
